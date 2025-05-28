@@ -66,6 +66,7 @@ lambda_risk_aversion = market_risk_premium / (port_vol ** 2)
 implied_returns = lambda_risk_aversion * np.dot(cov_matrix_for_bl, benchmark_weights)
 
 st.subheader("Implied Expected Returns")
+st.write("Black-Litterman market returns implied from asset weights and covariances")
 st.write(pd.DataFrame({"Asset": assets, "Implied Return": implied_returns.round(4)}))
 
 st.sidebar.subheader("Adjust Implied Returns")
